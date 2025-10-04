@@ -28,14 +28,19 @@ It generates fake flight events, streams them through Kafka, processes with Spar
    ```bash
    docker ps
    ```
+   
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Terminal%20.png" height = 1080 width = 720>
 
 3. **Run the data producer**
    - Open the `script/producer.ipynb` notebook in **Anaconda environment**  
    - Run it to generate fake flights data and send events to Kafka topic `flights`.
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Procedure.png" height = 1080 width = 720> 
 
 4. **Verify Kafka topic**
    - Open **Kafka UI** in your browser  at [http://localhost:8090](http://localhost:8090)  
-   - Check that topic `flights` is receiving messages  
+   - Check that topic `flights` is receiving messages
+     
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/kafka.png" height = 1080 width = 720>
 
 5. **Check PostgreSQL**
    - Open **pgAdmin** at [http://localhost:8085](http://localhost:8085)  
@@ -69,6 +74,8 @@ It generates fake flight events, streams them through Kafka, processes with Spar
          arrival_time BIGINT
      );
      ```
+     
+     <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/postegres.png" height = 1080 width = 720>
 
 9. **Run Spark Script**
    - Open the `scripts` folder and copy the Spark script into a Jupyter Notebook.  
@@ -77,13 +84,24 @@ It generates fake flight events, streams them through Kafka, processes with Spar
      ```bash
      pip install psycopg2-binary
      ```
-   - Run the notebook and confirm that records are being inserted into PostgreSQL.  
+   - Run the notebook and confirm that records are being inserted into PostgreSQL.
+  
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Spark.png" height = 1080 width = 720>
 
-10. **View Dashboard**
+   After the data is inserted in PostgreSQL :
+
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Postegres after row inserted.png" height = 1080 width = 720>
+
+11. **View Dashboard**
    - Open the Streamlit app at [http://localhost:8501](http://localhost:8501)  
    - Explore the **real-time flights map** and **flight statuses**.  
 
 ---
+
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Streamlit.png" height = 1080 width = 720>
+   
+   <img src = "https://github.com/MazenSehsah/Flights-Project-Task/blob/master/results/Streamlit2.png" height = 1080 width = 720>
+
 
 ## 📊 Data Flow
 
